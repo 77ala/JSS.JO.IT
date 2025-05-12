@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="language" content="Arabic">
+    <link rel="shortcut icon" href="School.jpg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="مدرسة الأردن الثانوية للبنات - مؤسسة تعليمية تدمج بين المسار الأكاديمي والمهني، تُعد الطالبات لسوق العمل عبر برامج بيرسون البريطانية (BTEC) والمبادرات المجتمعية.">
+<meta name="keywords" content="مدرسة الأردن الثانوية, مدارس البنات العقبة, التعليم المهني, Pearson BTEC, الثانوية العامة الأردن, مدارس حكومية العقبة">
+<meta name="author" content="Hala Hasan">
+<meta name="copyright" content="Copyright 2025 Hala Hasan, مدرسة الأردن الثانوية للبنات">
+<meta name="revised" content="2025-05-11">
+<meta name="robots" content="noindex, follow">
+<meta name="application-name" content="JSS School">
+<meta name="theme-color" content="#5c4465">
+<meta http-equiv="content-language" content="ar">
+<meta property="og:title" content="مدرسة الأردن الثانوية للبنات">
+<meta property="og:description" content="مؤسسة تعليمية تدمج بين المسار الأكاديمي والمهني في العقبة">
+    <link href="CSS.CSS" rel="stylesheet">
+    <script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    document.getElementById("confirmationMessage").classList.remove("d-none");
+
+    this.reset();
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init('service_tsselea'); 
+</script>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault(); 
+    const confirmation = document.getElementById("confirmationMessage");
+    confirmation.classList.remove("d-none");
+
+    this.reset();
+
+    this.style.display = "none";
+    setTimeout(() => {
+      this.submit();
+    }, 2000); 
+  });
+</script>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  try {
+    const response = await fetch(this.action, {
+      method: 'POST',
+      body: new FormData(this),
+      headers: { 'Accept': 'application/json' }
+    });
+    
+    const result = await response.json();
+    console.log("Response:", result);
+    
+    if (response.ok) {
+      document.getElementById('confirmationMessage').classList.remove('d-none');
+      this.reset();
+    } else {
+      alert(`Error: ${result.error}`);
+    }
+  } catch (error) {
+    console.error("Submission error:", error);
+    alert("فشل الإرسال. الرجاء المحاولة لاحقًا");
+  }
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+</head>
+<body><header><nav class="navbar navbar-expand-md navbar-purple bg-purple text-white sticky-top">
+  <div class="container-fluid">
+    <div class="d-flex align-items-center gap-2">
+      <img src="School.jpg" alt="شعار المدرسة" width="50" class="rounded-circle">
+      <img src="wa.png" alt="wazara Logo" width="50" class="rounded-circle">
+      <!-- <img src="pearson.png" alt="Pearson Logo" width="50" class="rounded-circle"> -->
+    </div>
+    <h5 class="mb-0 fw-bold d-none d-md-block text-center flex-grow-1">مدرسة الاردن الثانوية للبنات</h5>
+    <button class="navbar-toggler d-md-none border-0 p-1" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="تبديل التنقل">
+      <i class="fas fa-bars fs-3"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav justify-content-center w-100 py-2" style="font-size:1.2rem">
+        <li class="nav-item">
+          <a class="nav-link text-white px-3 mx-1 active" href="#">
+            <i class="fas fa-home ms-2"></i>الرئيسية
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white px-3 mx-1" href="#about">
+            <i class="fas fa-info-circle ms-2"></i>معلومات عنا
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white px-3 mx-1" href="#Adva">
+            <i class="fas fa-star ms-2"></i>المميزات
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white px-3 mx-1" href="#contact">
+            <i class="fas fa-phone ms-2"></i>اتصل بنا
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main>
+    <section id="gal" class="py-5 bg-light" data-aos="fade-up">
+  <div class="container text-center">
+    <h1 class="display-4 mb-4">مدرسة الاردن الثانوية للبنات</h1>
+    <p class="lead mb-5">مؤسسة تعليمية رائدة تمكّن الطالبات من التميّز المهني والأكاديمي، وتُسهم في بناء شخصيتهن وتنمية مهاراتهن استعداداً لمستقبل مشرق في مجتمع متطور.</p>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4 col-sm-6">
+        <div class="gallery-card shadow rounded overflow-hidden">
+          <img src="ta3awn.jpg" alt="ta3awn" class="img-fluid w-100 h-100 object-fit-cover" title="this introdition For cyber security">
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="gallery-card shadow rounded overflow-hidden">
+          <img src="cyber3.jpg" alt="Cyber3" class="img-fluid w-100 h-100 object-fit-cover" title="this introdition For cyber security">
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="gallery-card shadow rounded overflow-hidden">
+          <img src="important2.jpg" alt="important2" class="img-fluid w-100 h-100 object-fit-cover" title="This Business Class">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section id="about" class="py-5 about-purple text-white" data-aos="fade-up">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                <div class="col-md-6 text-center mb-4 mb-md-0">
+                    <img src="important.jpg" alt="important" class="img-fluid rounded shadow-lg w-75" title="thisthe important day ror our school">
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0 text-center text-md-end">
+                    <h2 class="fw-bold text-white mb-3">من نحن</h2>
+                    <p class="lead mb-4">مؤسسة تعليمية حكومية متميزة في محافظة العقبة تم بناها في سنة 2022م تُشرف عليها المديرة ميرفت السبايلة، تضم المدرسة صفوف من الصف سابع الى الصف الثاني ثانوي بمختلف التخصصات المهنية والاكادمية وتقدّم برامج تعليمية متقدمة تدمج بين المسار الأكاديمي والمهني ضمن معايير وزارة التربية والتعليم ونظام بيرسون البريطاني للتعليم المهني.
+
+تسعى المدرسة إلى تمكين الطالبات بالعلم والمهارات العملية، من خلال بيئة تعليمية تفاعلية تُحفّز على الإبداع، التفكير الناقد، والعمل الجماعي من خلال:
+<ul class="lead mb-4">
+        <li>تطوير المهارات الحياتية والمهنية للطالبات</li>
+        <li>تعزيز المسؤولية والانتماء من خلال المبادرات المجتمعية.
+</li>
+        <li>الإعداد لسوق العمل المحلي والعالمي بالتدريب العملي والتقني.</li>
+    </ul>
+                    </p>
+                    <a href="#contact" class="btn btn-outline-light">تواصل معنا</a>
+                </div>
+                </div>
+            </div>
+    </section>
+    <section id="Adva" class="py-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center mb-5 text-dark">أحدث الأخبار</h2>
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="Adva-card Advas-card">
+                        <div class="Adva-wrapper side-icon">
+                        </div>
+                        <h3> مدرسة معتمدة </h3>
+                        <p> اعتمدت مدرستنا بشكل رسمي من قبل شركة Pearson  لتدريس نظام BTEC</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="Adva-card Advas-card">
+                        <div class="Adva-wrapper side-icon">
+                        </div>
+                        <h3> اساس النجاح </h3>
+                        <p> فوز طالباتنا على مستوى المملكة في مسابقة الامن السيبراني </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="Adva-card Advas-card">
+                        <div class="Adva-wrapper side-icon">
+                        </div>
+                        <h3> مركز دعم </h3>
+                        <p>ندعم مشاركات طالبتنا في المعارض متنوعة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </section>
+<section id="gal" class="py-5 bg-light" data-aos="fade-up">
+  <div class="container text-center">
+    <h1 class="display-4 mb-4">  تمكين الطالبات نحو الريادة والابداع</h1>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4 col-sm-6">
+        <div class="gallery-card shadow rounded overflow-hidden">
+          <img src="cyber.jpg" alt="Cyber" class="img-fluid w-100 h-100 object-fit-cover"title="this when IT class went to NCSC-cyber security">
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="gallery-card shadow rounded overflow-hidden">
+          <img src="cyber2.jpg" alt="Cyber2" class="img-fluid w-100 h-100 object-fit-cover" title="this when IT class in NCSC-cyber security">
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="gallery-card shadow rounded overflow-hidden">
+          <img src="M3rad.jpg" alt="m3rad" class="img-fluid w-100 h-100 object-fit-cover" title="This foe english class">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+   
+<section id="contact" class="py-5 bg-light" data-aos="fade-up">
+  <div class="container">
+    <h2 class="text-center mb-4 text-dark">رأيك يهمنا</h2>
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+       <form action="https://formsubmit.co/forithala @gmail.com" method="POST" class="p-4 border rounded shadow bg-light">
+          <h4 class="mb-4 text-center">شاركنا رأيك</h4>
+
+          <!-- الاسم -->
+          <div class="mb-3">
+            <label for="name" class="form-label">الاسم</label>
+            <input type="text" name="name" class="form-control" required>
+          </div>
+
+          <!-- العمر -->
+          <div class="mb-3">
+            <label for="age" class="form-label">عمرك:</label>
+            <input type="number" name="age" min="13" max="65" class="form-control" required>
+          </div>
+
+          <!-- التعليق -->
+          <div class="mb-3">
+            <label for="message" class="form-label">تعليقك</label>
+            <textarea name="message" rows="4" class="form-control" required></textarea>
+          </div>
+
+          <!-- زر الإرسال -->
+          <button type="submit" class="btn btn-primary w-100">إرسال</button>
+        </form>
+
+        <!-- رسالة التأكيد -->
+        <div id="confirmationMessage" class="alert alert-success mt-3 d-none text-center" role="alert">
+          تم استلام تعليقك بنجاح!
+        </div>
+    </div>
+  </div>
+</section>
+    </main>
+ <footer class="modern-footer">
+  <div class="footer-wave"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="footer-brand">
+          <img src="School.jpg" alt="شعار المدرسة" width="60" class="rounded-circle">
+          <h3>مدرسة الأردن الثانوية للبنات</h3>
+          <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> العقبة-الملقان</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h4>روابط سريعة</h4>
+        <ul class="footer-links">
+          <li><a href="#">الرئيسية</a></li>
+          <li><a href="#about">عن المدرسة</a></li>
+          <li><a href="#Adva">المميزات</a></li>
+          <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+      </div>
+ <div class="col-lg-3 col-md-6 mb-4 text-center">
+  <div class="mb-4">
+    <h4>تواصل معنا</h4>
+    <div class="social-media">
+      <a href="https://www.facebook.com/profile.php?id=61572801510665&mibextid=ZbWKwL" 
+         target="_blank" 
+         class="social-icon fb">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+  </div>
+  <div>
+    <h4>تواصل مع المطورة</h4>
+    <div class="social-media">
+      <a href="https://www.instagram.com/btec_tawjihi?igsh=MTg3aXYzY2hqd3Jr" 
+         target="_blank"
+         class="social-icon insta">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h4>موقعنا</h4>
+        <div class="footer-map">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3469.5900672824037!2d35.0266953!3d29.5865285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15006fe155f5d83f%3A0xff39f4858a282324!2z2YXYr9ix2LPYqSDYp9mE2LnZgtio2Kkg2KfZhNij2LHYr9mGINin2YTYq9in2YbZiNmK2Kkg2YTZhNio2YbZitmG!5e0!3m2!1sen!2sjo!4v1746987692292!5m2!1sen!2sjo" width="350" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                  <!-- width="100%" ;
+                  height="200" ;
+                  style="border:0; border-radius:8px;" ;
+                  allowfullscreen="" ;
+                  loading="lazy" ;
+                  referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p> تم تطوير هذا الموقع بواسطة حلا حسن، جميع الحقوق محفوظة لمدرسة الأردن الثانوية للبنات  © 2025. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>    
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+  const form = document.querySelector('form');
+  form.addEventListener('submit', function () {
+    const confirmation = document.getElementById('confirmationMessage');
+    confirmation.classList.remove('d-none');
+    this.reset();
+    setTimeout(() => {
+      form.style.display = 'none';
+    }, 3000);
+  });
+</script>
+   <script>
+  // استهداف النموذج باستخدام id بدلاً من querySelector العام
+  const form = document.getElementById("contact-form");
+  const confirmationMessage = document.getElementById("confirmationMessage");
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // منع الإرسال الافتراضي مؤقتًا
+
+    // عرض رسالة التأكيد
+    confirmationMessage.classList.remove("d-none");
+
+    // إعادة تعيين النموذج
+    this.reset();
+
+    // (اختياري) إخفاء النموذج بعد 3 ثوانٍ
+    setTimeout(() => {
+      form.style.display = "none";
+    }, 3000);
+
+    // إرسال النموذج بعد المعالجة
+    this.submit();
+  });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector('form[action*="formsubmit.co"]');
+    const confirmation = document.getElementById("confirmationMessage");
+
+    if (form) {
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); // منع الإرسال الافتراضي مؤقتًا
+
+            // إظهار رسالة التأكيد
+            confirmation.classList.remove("d-none");
+
+            // إعادة تعيين الحقول
+            this.reset();
+
+            // (اختياري) إخفاء النموذج بعد 3 ثوانٍ
+            setTimeout(() => {
+                this.style.display = "none";
+            }, 3000);
+
+            // إرسال النموذج بشكل طبيعي بعد عرض الرسالة
+            setTimeout(() => {
+                form.submit();
+            }, 100); // إرسال النموذج بعد عرض الرسالة بقليل
+        });
+    }
+});
+</script>
+</body>
+</html>
