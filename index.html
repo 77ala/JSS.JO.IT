@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>مدرسة الأردن الثانوية للبنات</title>
     <meta charset="UTF-8">
     <meta name="language" content="Arabic">
     <link rel="shortcut icon" href="School.jpg" type="image/x-icon">
@@ -22,102 +23,47 @@
 <meta property="og:title" content="مدرسة الأردن الثانوية للبنات">
 <meta property="og:description" content="مؤسسة تعليمية تدمج بين المسار الأكاديمي والمهني في العقبة">
     <link href="CSS.CSS" rel="stylesheet">
-    <script>
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    document.getElementById("confirmationMessage").classList.remove("d-none");
-
-    this.reset();
-});
-</script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  emailjs.init('service_tsselea'); 
-</script>
-<script>
-  document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault(); 
-    const confirmation = document.getElementById("confirmationMessage");
-    confirmation.classList.remove("d-none");
-
-    this.reset();
-
-    this.style.display = "none";
-    setTimeout(() => {
-      this.submit();
-    }, 2000); 
-  });
-</script>
-<script>
-  document.getElementById('contactForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  
-  try {
-    const response = await fetch(this.action, {
-      method: 'POST',
-      body: new FormData(this),
-      headers: { 'Accept': 'application/json' }
-    });
     
-    const result = await response.json();
-    console.log("Response:", result);
-    
-    if (response.ok) {
-      document.getElementById('confirmationMessage').classList.remove('d-none');
-      this.reset();
-    } else {
-      alert(`Error: ${result.error}`);
-    }
-  } catch (error) {
-    console.error("Submission error:", error);
-    alert("فشل الإرسال. الرجاء المحاولة لاحقًا");
-  }
-});
-</script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
 </head>
 <body><header><nav class="navbar navbar-expand-md navbar-purple bg-purple text-white sticky-top">
   <div class="container-fluid">
     <div class="d-flex align-items-center gap-2">
       <img src="School.jpg" alt="شعار المدرسة" width="50" class="rounded-circle">
       <img src="wa.png" alt="wazara Logo" width="50" class="rounded-circle">
-      <!-- <img src="pearson.png" alt="Pearson Logo" width="50" class="rounded-circle"> -->
+      <img src="images.png" alt="Pearson Logo" width="50" class="rounded-circle">
     </div>
     <h5 class="mb-0 fw-bold d-none d-md-block text-center flex-grow-1">مدرسة الاردن الثانوية للبنات</h5>
-    <button class="navbar-toggler d-md-none border-0 p-1" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNavbar"
-            aria-controls="mainNavbar"
-            aria-expanded="false"
-            aria-label="تبديل التنقل">
-      <i class="fas fa-bars fs-3"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav justify-content-center w-100 py-2" style="font-size:1.2rem">
-        <li class="nav-item">
-          <a class="nav-link text-white px-3 mx-1 active" href="#">
-            <i class="fas fa-home ms-2"></i>الرئيسية
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white px-3 mx-1" href="#about">
-            <i class="fas fa-info-circle ms-2"></i>معلومات عنا
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white px-3 mx-1" href="#Adva">
-            <i class="fas fa-star ms-2"></i>المميزات
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white px-3 mx-1" href="#contact">
-            <i class="fas fa-phone ms-2"></i>اتصل بنا
-          </a>
-        </li>
-      </ul>
+    <ul class="navbar-nav justify-content-center w-100 py-2" style="font-size:1.2rem">
+  <li class="nav-item">
+    <a class="nav-link text-white px-3 mx-1 active" href="#">
+      <i class="fas fa-home ms-2"></i>الرئيسية
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white px-3 mx-1" href="#about">
+      <i class="fas fa-info-circle ms-2"></i>معلومات عنا
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white px-3 mx-1" href="#Adva">
+      <i class="fas fa-star ms-2"></i>المميزات
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white px-3 mx-1" href="index2.html">
+      <i class="fas fa-question-circle ms-2"></i>الأسئلة الشائعة
+    </a>
+  </li>
+  
+  <li class="nav-item">
+    <a class="nav-link text-white px-3 mx-1" href="index3.html">
+      <i class="fas fa-graduation-cap ms-2"></i>الطلبة الأوائل
+    </a>
+  </li>
+
+</ul>
     </div>
-  </div>
+  
 </nav>
 </header>
 <main>
@@ -222,44 +168,6 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     </div>
   </div>
 </section>
-   
-<section id="contact" class="py-5 bg-light" data-aos="fade-up">
-  <div class="container">
-    <h2 class="text-center mb-4 text-dark">رأيك يهمنا</h2>
-    <div class="row">
-      <div class="col-md-6 mx-auto">
-       <form action="https://formsubmit.co/forithala @gmail.com" method="POST" class="p-4 border rounded shadow bg-light">
-          <h4 class="mb-4 text-center">شاركنا رأيك</h4>
-
-          <!-- الاسم -->
-          <div class="mb-3">
-            <label for="name" class="form-label">الاسم</label>
-            <input type="text" name="name" class="form-control" required>
-          </div>
-
-          <!-- العمر -->
-          <div class="mb-3">
-            <label for="age" class="form-label">عمرك:</label>
-            <input type="number" name="age" min="13" max="65" class="form-control" required>
-          </div>
-
-          <!-- التعليق -->
-          <div class="mb-3">
-            <label for="message" class="form-label">تعليقك</label>
-            <textarea name="message" rows="4" class="form-control" required></textarea>
-          </div>
-
-          <!-- زر الإرسال -->
-          <button type="submit" class="btn btn-primary w-100">إرسال</button>
-        </form>
-
-        <!-- رسالة التأكيد -->
-        <div id="confirmationMessage" class="alert alert-success mt-3 d-none text-center" role="alert">
-          تم استلام تعليقك بنجاح!
-        </div>
-    </div>
-  </div>
-</section>
     </main>
  <footer class="modern-footer">
   <div class="footer-wave"></div>
@@ -281,6 +189,8 @@ document.getElementById("contactForm").addEventListener("submit", function(event
           <li><a href="#about">عن المدرسة</a></li>
           <li><a href="#Adva">المميزات</a></li>
           <li><a href="#contact">اتصل بنا</a></li>
+          <li><a href="index2.html">الاسئلة الشائعة</a></li>
+          <li><a href="index3.html"> الطلبة الاوائل</a></li>
         </ul>
       </div>
  <div class="col-lg-3 col-md-6 mb-4 text-center">
@@ -288,8 +198,8 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     <h4>تواصل معنا</h4>
     <div class="social-media">
       <a href="https://www.facebook.com/profile.php?id=61572801510665&mibextid=ZbWKwL" 
-         target="_blank" 
-         class="social-icon fb">
+          target="_blank" 
+          class="social-icon fb">
         <i class="fab fa-facebook-f"></i>
       </a>
     </div>
@@ -298,8 +208,8 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     <h4>تواصل مع المطورة</h4>
     <div class="social-media">
       <a href="https://www.instagram.com/btec_tawjihi?igsh=MTg3aXYzY2hqd3Jr" 
-         target="_blank"
-         class="social-icon insta">
+        target="_blank"
+        class="social-icon insta">
         <i class="fab fa-instagram"></i>
       </a>
     </div>
@@ -308,13 +218,9 @@ document.getElementById("contactForm").addEventListener("submit", function(event
       <div class="col-lg-3 col-md-6 mb-4">
         <h4>موقعنا</h4>
         <div class="footer-map">
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3469.5900672824037!2d35.0266953!3d29.5865285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15006fe155f5d83f%3A0xff39f4858a282324!2z2YXYr9ix2LPYqSDYp9mE2LnZgtio2Kkg2KfZhNij2LHYr9mGINin2YTYq9in2YbZiNmK2Kkg2YTZhNio2YbZitmG!5e0!3m2!1sen!2sjo!4v1746987692292!5m2!1sen!2sjo" width="350" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                  <!-- width="100%" ;
-                  height="200" ;
-                  style="border:0; border-radius:8px;" ;
-                  allowfullscreen="" ;
-                  loading="lazy" ;
-                  referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3469.5900672824037!2d35.0266953!3d29.5865285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15006fe155f5d83f%3A0xff39f4858a282324!2z2YXYr9ix2LPYqSDYp9mE2LnZgtio2Kkg2KfZhNij2LHYr9mGINin2YTYq9in2YbZiNmK2Kkg2YTZhNio2YbZitmG!5e0!3m2!1sen!2sjo!4v1746987692292!5m2!1sen!2sjo" width="350" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          
+              </iframe> 
         </div>
       </div>
     </div>
@@ -345,56 +251,6 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     }, 3000);
   });
 </script>
-   <script>
-  // استهداف النموذج باستخدام id بدلاً من querySelector العام
-  const form = document.getElementById("contact-form");
-  const confirmationMessage = document.getElementById("confirmationMessage");
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // منع الإرسال الافتراضي مؤقتًا
-
-    // عرض رسالة التأكيد
-    confirmationMessage.classList.remove("d-none");
-
-    // إعادة تعيين النموذج
-    this.reset();
-
-    // (اختياري) إخفاء النموذج بعد 3 ثوانٍ
-    setTimeout(() => {
-      form.style.display = "none";
-    }, 3000);
-
-    // إرسال النموذج بعد المعالجة
-    this.submit();
-  });
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector('form[action*="formsubmit.co"]');
-    const confirmation = document.getElementById("confirmationMessage");
-
-    if (form) {
-        form.addEventListener("submit", function (e) {
-            e.preventDefault(); // منع الإرسال الافتراضي مؤقتًا
-
-            // إظهار رسالة التأكيد
-            confirmation.classList.remove("d-none");
-
-            // إعادة تعيين الحقول
-            this.reset();
-
-            // (اختياري) إخفاء النموذج بعد 3 ثوانٍ
-            setTimeout(() => {
-                this.style.display = "none";
-            }, 3000);
-
-            // إرسال النموذج بشكل طبيعي بعد عرض الرسالة
-            setTimeout(() => {
-                form.submit();
-            }, 100); // إرسال النموذج بعد عرض الرسالة بقليل
-        });
-    }
-});
-</script>
 </body>
 </html>
