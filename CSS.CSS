@@ -690,21 +690,18 @@ label.form-label-gradient {
   margin-left: 8px;
   font-size: 1.2em;
 }
-
-/* تحسين التباين عند hover */
 .accordion-button:hover {
   background-color: #e0c6ff;
 }
-/* توسيط الأعمدة اللي فيها الروابط */
 .col-lg-3.col-md-6.mb-4.text-center {
   display: flex;
   flex-direction: column;
-  align-items: center;  /* توسيط أفقياً */
-  justify-content: center; /* توسيط عمودياً */
+  align-items: center; 
+  justify-content: center;
   text-align: center;
-  margin: 0 auto; /* يحط العمود نفسه بالنص */
+  margin: 0 auto; 
 }
 .modern-footer .row {
-  justify-content: center !important; /* خلي الأعمدة بالنص */
+  justify-content: center !important; 
   text-align: center;
 }
