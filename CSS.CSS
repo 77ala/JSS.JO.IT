@@ -695,3 +695,16 @@ label.form-label-gradient {
 .accordion-button:hover {
   background-color: #e0c6ff;
 }
+/* توسيط الأعمدة اللي فيها الروابط */
+.col-lg-3.col-md-6.mb-4.text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* توسيط أفقياً */
+  justify-content: center; /* توسيط عمودياً */
+  text-align: center;
+  margin: 0 auto; /* يحط العمود نفسه بالنص */
+}
+.modern-footer .row {
+  justify-content: center !important; /* خلي الأعمدة بالنص */
+  text-align: center;
+}
